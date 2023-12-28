@@ -40,7 +40,9 @@
     },
     "peerDependencies": {
         "react": ">=18",
-        "react-dom": ">=18"
+        "react-dom": ">=18",
+        "@mui/material": "^5.15.2",
+        "@mui/x-tree-view": "^6.0.0"
     },
     "files": [
         "dist",
