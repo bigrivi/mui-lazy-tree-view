@@ -5,16 +5,13 @@ import { TreeView, TreeNode } from "mui-lazy-tree-view";
 
 const useStyles = makeStyles()((theme) => {
     return {
-        root: {
-            padding: 0,
-        },
         treeItemContent: {
-            padding: "5px 8px",
+            padding: "5px 8px !important",
         },
     };
 });
 
-const initTreeData = [
+const initTreeData: TreeNode[] = [
     {
         title: "node1",
         key: "node1",
@@ -110,7 +107,6 @@ function App() {
                     content: classes.treeItemContent,
                 }}
                 selected={selected}
-                sx={{ position: "relative" }}
                 onNodeSelect={handleSelect}
                 titleRender={(node) => {
                     return <>{node.title}</>;
