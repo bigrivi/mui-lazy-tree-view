@@ -1,6 +1,6 @@
 {
     "name": "mui-lazy-tree-view",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "",
     "main": "./lib/cjs/index.js",
     "module": "./lib/esm/index.js",
@@ -51,5 +51,9 @@
         "/lib",
         "LICENSE",
         "README.md"
-    ]
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bigrivi/mui-lazy-tree-view"
+    }
 }
