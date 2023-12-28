@@ -48,7 +48,7 @@
         "classnames": "^2.3.1"
     },
     "files": [
-        "dist",
+        "/lib",
         "LICENSE",
         "README.md"
     ]
