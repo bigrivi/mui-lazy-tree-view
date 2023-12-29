@@ -9,7 +9,7 @@ Encapsulation of [@mui/x-tree-view](https://github.com/bigrivi/mui-x/tree/next/p
 4. Support custom title render
 5. Compatible with all props of @mui/x-tree-view
 
-<img src="./img.png" width="600px"/>
+![image](https://github.com/bigrivi/mui-lazy-tree-view/blob/main/img.png)
 
 ## Installation & Usage
 
