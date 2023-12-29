@@ -15,6 +15,16 @@ Encapsulation of [@mui/x-tree-view](https://github.com/bigrivi/mui-x/tree/next/p
 npm i mui-lazy-tree-view
 ```
 
+This component has the following peer dependencies that you will need to install as well.
+
+```json
+"peerDependencies": {
+  "@mui/x-tree-view": "^6.0.0",
+  "react": "^18.0.0",
+  "react-dom": "^18.0.0"
+},
+```
+
 ```tsx
 import { useState } from "react";
 import { makeStyles } from "tss-react/mui";
