@@ -57,11 +57,9 @@ function App() {
     const handleSelect = (event: React.SyntheticEvent, nodeId: string) => {
         console.log("handleSelect");
         setSelected(nodeId as string);
-        // console.log("selected nodeId", nodeId);
     };
 
     const onLazyLoad = ({ key, children }) => {
-        // key = "node2";
         return new Promise<TreeNode[]>((resolve) => {
             if (children && children.length) {
                 resolve([]);

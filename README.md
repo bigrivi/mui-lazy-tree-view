@@ -1,5 +1,13 @@
 
-# Implementing mui tree view with lazy loading of data
+# Implement lazy loading of data for mui tree view
+
+Encapsulation of [@mui/x-tree-view](https://github.com/bigrivi/mui-x/tree/next/packages/x-tree-view) package
+
+1. Support loading data on demand
+2. Tree nodes support array data source
+3. Support custom content components
+4. Support custom title render
+5. Compatible with all props of @mui/x-tree-view
 
 ## Installation & Usage
 
@@ -68,7 +76,6 @@ function App() {
     };
 
     const onLazyLoad = ({ key, children }) => {
-        // key = "node2";
         return new Promise<TreeNode[]>((resolve) => {
             if (children && children.length) {
                 resolve([]);
@@ -126,4 +133,52 @@ function App() {
 
 export default App;
 
+```
+The children of any node are explicitly empty arrays.
+such as children: [],will trigger the lazy loading callback function
+
+**lazyLoadFn** Prop
+
+Gets or sets a function that loads child nodes on demand.
+
+The lazyLoadFn takes two parameters: the node being expanded and a callback to be invoked when the data becomes available.
+
+The callback function return a Promise<TreeNode[]> tells the TreeView that the node loading process has been completed. It should always be called, even if there are errors when loading the data.
+
+```tsx
+const onLazyLoad = ({ key, children }) => {
+    return new Promise<TreeNode[]>((resolve) => {
+        if (children && children.length) {
+            resolve([]);
+            return;
+        }
+        setTimeout(() => {
+            resolve([
+                {
+                    title: `Another lazy node...`,
+                    key: `${key}-0`,
+                    children: [],
+                },
+                {
+                    title: "A non-lazy node without children",
+                    key: `${key}-1`,
+                },
+                {
+                    title: "A non-lazy node with child nodes",
+                    key: `${key}-2`,
+                    children: [
+                        {
+                            title: "nodeA",
+                            key: `${key}-2-1`,
+                        },
+                        {
+                            title: "nodeB",
+                            key: `${key}-2-2`,
+                        },
+                    ],
+                },
+            ]);
+        }, 1000);
+    });
+};
 ```

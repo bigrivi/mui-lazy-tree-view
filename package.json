@@ -1,6 +1,6 @@
 {
     "name": "mui-lazy-tree-view",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "",
     "main": "./lib/cjs/index.js",
     "module": "./lib/esm/index.js",
@@ -17,6 +17,7 @@
         "react",
         "typescript",
         "treeview",
+        "mui treeview",
         "lazy-load"
     ],
     "dependencies": {
